@@ -3,7 +3,7 @@ namespace Adventure.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitializeLocalDB : DbMigration
+    public partial class AddedYactoSQLServer : DbMigration
     {
         public override void Up()
         {

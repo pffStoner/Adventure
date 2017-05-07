@@ -7,13 +7,13 @@ namespace Adventure.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitializeLocalDB : IMigrationMetadata
+    public sealed partial class AddedYactoSQLServer : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitializeLocalDB));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedYactoSQLServer));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705071639548_InitializeLocalDB"; }
+            get { return "201705072251039_AddedYactoSQLServer"; }
         }
         
         string IMigrationMetadata.Source
