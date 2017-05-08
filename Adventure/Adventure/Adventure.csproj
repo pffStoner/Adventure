@@ -202,6 +202,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\adventure-css\default-fonts.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -219,6 +220,38 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\my-fonts\Aladin-Regular.ttf" />
+    <Content Include="fonts\my-fonts\algerian.ttf" />
+    <Content Include="fonts\my-fonts\alsandra.ttf" />
+    <Content Include="fonts\my-fonts\Avdira_R.otf" />
+    <Content Include="fonts\my-fonts\BernardoModaBold.ttf" />
+    <Content Include="fonts\my-fonts\BernardoModaContrast.ttf" />
+    <Content Include="fonts\my-fonts\BeyondWonderland.ttf" />
+    <Content Include="fonts\my-fonts\BlackHoleBB.ttf" />
+    <Content Include="fonts\my-fonts\BulgariaModernaV3.otf" />
+    <Content Include="fonts\my-fonts\BULWN.TTF" />
+    <Content Include="fonts\my-fonts\BuxtonSketch.ttf" />
+    <Content Include="fonts\my-fonts\Castro.ttf" />
+    <Content Include="fonts\my-fonts\CURLZ.TTF" />
+    <Content Include="fonts\my-fonts\daliQ.ttf" />
+    <Content Include="fonts\my-fonts\dragonwick-fg.ttf" />
+    <Content Include="fonts\my-fonts\Fondamento-Italic.ttf" />
+    <Content Include="fonts\my-fonts\Fondamento-Regular.ttf" />
+    <Content Include="fonts\my-fonts\GoudyThirty-DemiBold.ttf" />
+    <Content Include="fonts\my-fonts\GoudyThirty-Light.ttf" />
+    <Content Include="fonts\my-fonts\guildof.ttf" />
+    <Content Include="fonts\my-fonts\Julee-Regular.ttf" />
+    <Content Include="fonts\my-fonts\Lobster.otf" />
+    <Content Include="fonts\my-fonts\MacondoSwashCaps-Regular.ttf" />
+    <Content Include="fonts\my-fonts\mariannalkikov.ttf" />
+    <Content Include="fonts\my-fonts\Metro.otf" />
+    <Content Include="fonts\my-fonts\qtarabianregular.ttf" />
+    <Content Include="fonts\my-fonts\RuslanDisplay.ttf" />
+    <Content Include="fonts\my-fonts\RUSSQN__.TTF" />
+    <Content Include="fonts\my-fonts\ss_adec.otf" />
+    <Content Include="fonts\my-fonts\stoNe.ttf" />
+    <Content Include="fonts\my-fonts\TheMonkiesAteMySoul.ttf" />
+    <Content Include="fonts\my-fonts\TravelingTypewriter.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -267,6 +300,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\AccountViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

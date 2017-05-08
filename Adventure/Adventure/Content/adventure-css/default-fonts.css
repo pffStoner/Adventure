@@ -1,0 +1,70 @@
+﻿@font-face {
+    font-family: 'marianna_lkikov';
+    src: url('../fonts/my-fonts/mariannalkikov.ttf');
+}
+
+@font-face {
+    font-family: 'ss-adec';
+    src: url('../../fonts/my-fonts/ss_adec.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'stone';
+    src: url('../../fonts/my-fonts/stoNe.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'castro';
+    src: url('../../fonts/my-fonts/Castro.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'alsandra';
+    src: url('../../fonts/my-fonts/alsandra.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'metro';
+    src: url('../../fonts/my-fonts/Metro.otf') format('truetype');
+}
+
+.metro {
+    font-family: metro;
+}
+.metro1 {
+    font-family: metro;
+    color: greenyellow !important;
+    font-size: 1.4em;
+}
+.metro1:hover {
+    font-family: metro;
+    color: #ff0000 !important;
+    font-size: 1.4em;
+}
+
+.alsandra {
+    font-family: alsandra;
+    color: greenyellow !important;
+    font-size:1.4em;
+}
+
+.castro {
+    font-family: castro;
+    color: greenyellow !important;
+}
+
+.stone {
+    font-family: stone;
+}
+.stone1 {
+    font-family: stone;
+    color: greenyellow !important;
+}
+
+.ss-adec {
+    font-family: ss-adec;
+}
+
+.marianna-lkikov {
+    font-family: marianna_lkikov;
+}
