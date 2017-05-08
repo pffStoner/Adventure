@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adventure.DbContext", "Adve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adventure.ConsoleClient", "Adventure.ConsoleClient\Adventure.ConsoleClient.csproj", "{0CD4CF21-8D71-44D6-9358-08ECF221236F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Common", "..\..\DB-Apps-With-EF-April-2017-master\00. (Common)\Project.Common\Project.Common.csproj", "{2027985E-3455-4253-AEF2-8341EAC83771}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Common", "Project.Common\Project.Common.csproj", "{2027985E-3455-4253-AEF2-8341EAC83771}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
