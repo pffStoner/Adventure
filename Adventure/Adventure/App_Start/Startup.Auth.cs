@@ -6,6 +6,8 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Adventure.Models;
+using Adventure.DbContext;
+using Adventure.Entities;
 
 namespace Adventure
 {
