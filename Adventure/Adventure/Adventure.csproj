@@ -212,6 +212,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\11_nature_photography_green.jpg" />
+    <Content Include="images\506856658.jpg" />
+    <Content Include="images\81.jpg" />
+    <Content Include="images\Awesome-best-nature-pictures.jpg" />
+    <Content Include="images\forest-path-germany.jpg.653x0_q80_crop-smart.jpg" />
+    <Content Include="images\imagesT0DM9BNO.jpg" />
+    <Content Include="images\imagesTALECHEU.jpg" />
+    <Content Include="images\nature_call-wide.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
