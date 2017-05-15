@@ -53,12 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="User.cs" />
+    <Compile Include="Common\EventTopic.cs" />
+    <Compile Include="Common\Location.cs" />
+    <Compile Include="Common\MailingAdress.cs" />
+    <Compile Include="Common\Venue.cs" />
+    <Compile Include="Models\Adventures.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project.Common\Project.Common.csproj">
+      <Project>{2027985E-3455-4253-AEF2-8341EAC83771}</Project>
+      <Name>Project.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

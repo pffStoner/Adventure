@@ -13,11 +13,35 @@ namespace Adventure.DbContext.Migrations
             AutomaticMigrationDataLossAllowed = false;//za da ne mi pozvolqva da triq neshta ot koito zavisqt drugi neshta
 
         }
+        protected override void Seed(ApplicationDbContext context)
 
-        protected override void Seed(Adventure.DbContext.ApplicationDbContext context)
         {
-            Initializer.SeedRoles(context);
-           // Initializer.SeedUser(context);
+
+            if (!context.Roles.Any())
+
+            {
+
+                Initializer.SeedRoles(context);
+
+            }
+
+
+
+            if (!context.Users.Any())
+
+            {
+
+                Initializer.SeedUsers(context);
+
+            }
+
+
+
+            Initializer.SeedEventTopics(context);
+
+            Initializer.SeedVenues(context);
+
+
         }
     }
 }

@@ -67,6 +67,10 @@
       <Project>{47E8EE38-41C4-4AEB-8B9D-2C4FD5E7D920}</Project>
       <Name>Adventure.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Project.Common\Project.Common.csproj">
+      <Project>{2027985E-3455-4253-AEF2-8341EAC83771}</Project>
+      <Name>Project.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
