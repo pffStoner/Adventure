@@ -14,7 +14,7 @@ namespace Adventure.DbContext
 {
     public class ApplicationDbContext : IdentityDbContext<User>
     {
-        public virtual IDbSet<Adventures> ITGigs { get; set; }
+        public virtual IDbSet<Adventures> Adeventures { get; set; }
 
         public virtual IDbSet<EventTopic> EventTopics { get; set; }
 
@@ -37,5 +37,7 @@ namespace Adventure.DbContext
         {
             return new ApplicationDbContext();
         }
+
+       // public System.Data.Entity.DbSet<Adventure.Entities.Models.Adventures> Adventures { get; set; }
     }
 }

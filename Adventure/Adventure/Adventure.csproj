@@ -189,8 +189,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdventuresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DTOs\AdventuresEntry.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -297,6 +299,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Adventures\Create.cshtml" />
+    <Content Include="Views\Adventures\Delete.cshtml" />
+    <Content Include="Views\Adventures\Details.cshtml" />
+    <Content Include="Views\Adventures\Edit.cshtml" />
+    <Content Include="Views\Adventures\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -325,6 +332,10 @@
     <ProjectReference Include="..\Adventure.Entities\Adventure.Entities.csproj">
       <Project>{47E8EE38-41C4-4AEB-8B9D-2C4FD5E7D920}</Project>
       <Name>Adventure.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.Common\Project.Common.csproj">
+      <Project>{2027985E-3455-4253-AEF2-8341EAC83771}</Project>
+      <Name>Project.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
