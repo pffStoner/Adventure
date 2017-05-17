@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Common.attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -28,12 +29,12 @@ namespace Adventure.DTOs
 
         [Required]
         [StringLength(50)]
-      //  [FutureDate]
+         [FutureDate]
         public string Date { get; set; }
 
         [Required]
         [StringLength(50)]
-       // [ValidTime]
+        [ValidTime]
         public string Time { get; set; }
 
         [Required]

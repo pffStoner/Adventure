@@ -57,10 +57,11 @@ namespace Adventure.Controllers
         {
             if (ModelState.IsValid)
             {
-                var UserId = User.Identity.GetUserId();
+               // var UserId = User.Identity.GetUserId();
 
 
-                Adventures adventures = new Adventures(UserId,entry.EventTopicId,entry.Title,entry.Description, entry.ExternalUrl,
+                Adventures adventures = new Adventures(User.Identity.GetUserId(),entry.EventTopicId,
+                    entry.Title,entry.Description, entry.ExternalUrl,
                     entry.ImgUrl,
                     entry.GetDate(),
                     entry.VenueId,
