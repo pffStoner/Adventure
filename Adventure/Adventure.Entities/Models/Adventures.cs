@@ -20,14 +20,51 @@ namespace Adventure.Entities.Models
 
 
 
-        public Adventures(string performerId, string eventTopicId, string title, string description, string externalUrl, string imgUrl,
+        //public Adventures(string performerId, string eventTopicId, string title, string description, string externalUrl, string imgUrl,
 
-            DateTime eventDate, string venueId, DateTime dateCreated, DateTime? dateModified, CustomId id = null)
+        //    DateTime eventDate, string venueId, DateTime dateCreated, DateTime? dateModified, CustomId id = null)
 
-            : this(id)
+        //    : this(id)
+
+        //{
+
+        //    this.PerformerId = performerId;
+
+        //    this.Title = title;
+
+        //    this.Description = description;
+
+        //    this.ExternalUrl = externalUrl;
+
+        //    this.ImgUrl = imgUrl;
+
+        //    this.EventDate = eventDate;
+
+        //    this.VenueId = venueId;
+
+        //    this.EventTopicId = eventTopicId;
+
+        //    this.DateCreated = dateCreated;
+
+        //    this.DateModified = dateModified;
+
+        //}
+
+
+
+        public Adventures(CustomId id)
 
         {
 
+            this.Id = string.IsNullOrEmpty(Convert.ToString(id)) ? new CustomId().ToString() : id.ToString();
+
+        }
+        public Adventures( string performerId, string eventTopicId, string title, string description, string externalUrl, string imgUrl,
+
+            DateTime eventDate, string venueId, DateTime dateCreated, DateTime? dateModified,  CustomId id = null)
+
+            : this(id)
+        {
             this.PerformerId = performerId;
 
             this.Title = title;
@@ -47,23 +84,12 @@ namespace Adventure.Entities.Models
             this.DateCreated = dateCreated;
 
             this.DateModified = dateModified;
-
-        }
-
-
-
-        public Adventures(CustomId id)
-
-        {
-
-            this.Id = string.IsNullOrEmpty(Convert.ToString(id)) ? new CustomId().ToString() : id.ToString();
-
+            //this.VoteCount = VoteCount;
         }
 
 
 
         [Key]
-
         public string Id { get; set; }
 
 
@@ -86,7 +112,7 @@ namespace Adventure.Entities.Models
 
         [Required]
 
-        [Display(Name = "Original article link")]
+        [Display(Name = "Video")]
 
         public string ExternalUrl { get; set; }
 
@@ -94,7 +120,7 @@ namespace Adventure.Entities.Models
 
         [Required]
 
-        [Display(Name = "Image url")]
+        [Display(Name = "Image")]
 
         public string ImgUrl { get; set; }
 
@@ -119,6 +145,7 @@ namespace Adventure.Entities.Models
 
 
         [Required]
+        [Display(Name = "Location")]
         public string VenueId { get; set; }
 
 
@@ -127,6 +154,7 @@ namespace Adventure.Entities.Models
 
 
         [Required]
+        [Display(Name = "Privacy")]
         public string EventTopicId { get; set; }
 
 
@@ -144,6 +172,10 @@ namespace Adventure.Entities.Models
 
         [Display(Name = "Date modified")]
         public DateTime? DateModified { get; set; }
+
+        public int VoteCount { get; set; }
+
+      
     }
 
 }

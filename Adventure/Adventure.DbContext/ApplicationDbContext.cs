@@ -24,6 +24,10 @@ namespace Adventure.DbContext
 
         public virtual IDbSet<Venue> Venues { get; set; }
 
+        public virtual IDbSet<Vote> Vote { get; set; }
+        public virtual IDbSet<Photo> Photo { get; set; }
+
+
 
         public ApplicationDbContext()
         : base("Adventure-DevConnection", throwIfV1Schema: false)
@@ -38,6 +42,8 @@ namespace Adventure.DbContext
             return new ApplicationDbContext();
         }
 
-       // public System.Data.Entity.DbSet<Adventure.Entities.Models.Adventures> Adventures { get; set; }
+        //public System.Data.Entity.DbSet<Adventure.Entities.Models.Adventures> Adventures { get; set; }
+
+        // public System.Data.Entity.DbSet<Adventure.Entities.Models.Adventures> Adventures { get; set; }
     }
 }

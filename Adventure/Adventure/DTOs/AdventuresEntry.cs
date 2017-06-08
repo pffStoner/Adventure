@@ -44,7 +44,7 @@ namespace Adventure.DTOs
         [Required]
         [Display(Name = "Event Topic")]
         public string EventTopicId { get; set; }
-
+        public int VoteCount { get; set; }
         public DateTime GetDate()
         {
             return DateTime.Parse($"{this.Date} {this.Time}");

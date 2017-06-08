@@ -14,7 +14,7 @@ namespace Adventure.DbContext.Migrations
         internal static void SeedRoles(ApplicationDbContext context)
 
         {
-
+        
             string[] roles =
 
             {
@@ -145,15 +145,9 @@ namespace Adventure.DbContext.Migrations
 
                     e => e.Name,
 
-                    new EventTopic("Medicine"),
+                    new EventTopic("Public"),
 
-                    new EventTopic("Iconomics"),
-
-                    new EventTopic("IT & Computer science"),
-
-                    new EventTopic("Physics & space"),
-
-                    new EventTopic("Renewable energy")
+                    new EventTopic("Private")
 
                 );
 

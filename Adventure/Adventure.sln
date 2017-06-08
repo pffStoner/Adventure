@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adventure", "Adventure\Adventure.csproj", "{39A94A80-CD9A-4369-ADD6-555995340585}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adventure.ConsoleClient", "Adventure.ConsoleClient\Adventure.ConsoleClient.csproj", "{0CD4CF21-8D71-44D6-9358-08ECF221236F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Common", "Project.Common\Project.Common.csproj", "{2027985E-3455-4253-AEF2-8341EAC83771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adventures.Services", "Adventures.Services\Adventures.Services.csproj", "{DECED2CA-AEEA-4B7E-BF80-16A5C0B9E79D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2027985E-3455-4253-AEF2-8341EAC83771}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2027985E-3455-4253-AEF2-8341EAC83771}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2027985E-3455-4253-AEF2-8341EAC83771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DECED2CA-AEEA-4B7E-BF80-16A5C0B9E79D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DECED2CA-AEEA-4B7E-BF80-16A5C0B9E79D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DECED2CA-AEEA-4B7E-BF80-16A5C0B9E79D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DECED2CA-AEEA-4B7E-BF80-16A5C0B9E79D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

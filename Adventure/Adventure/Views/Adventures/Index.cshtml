@@ -1,46 +1,95 @@
 ﻿@model IEnumerable<Adventure.Entities.Models.Adventures>
 
+
 @{
     ViewBag.Title = "Index";
 }
+<style>
+    /*input[type=text] {
+        width: 100%;
+        padding: 10px 5px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: #ccffcc;
+        color: white;
+    }*/
+    input[type=text] {
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 2px;
+        font-size: 14px;
+        background-color: #ccffcc;
+        background-image: url('');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 33px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
 
+        input[type=text]:focus {
+            width: 100%;
+        }
+    body {
+        background-image: url("../../images/nature_call-wide.jpg");
+        background-color: #cccccc;
+    }
+    a.my-class {
+        color: #333333
+    }
+
+        a.my-class:active {
+            color: #666666
+        }
+
+        a.my-class:link {
+            color: #999999
+        }
+
+        a.my-class:visited {
+            color: #CCCCCC
+        }
+</style>
 <h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search" />
+    </p>
+}
 <table class="table">
+
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.EventTopic.Name)
+            @Html.DisplayNameFor(model => model.EventTopic)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Performer.UserName)
+            @Html.ActionLink(" User", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ExternalUrl)
+            @Html.ActionLink(" Title", "Index", new { sortOrder = ViewBag.NameSortParm })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ImgUrl)
         </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.ExternalUrl)
+        </th>*@
+        
         <th>
             @Html.DisplayNameFor(model => model.EventDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.VenueId)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateCreated)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateModified)
-        </th>
+       
         <th></th>
     </tr>
 
@@ -52,15 +101,18 @@
         <td>
             @Html.DisplayFor(modelItem => item.Performer.UserName)
         </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.Title)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ExternalUrl)
-        </td>
+       
+       
+
+        @*<td>
+            <div style="overflow:hidden;height:270px;width:480px;max-width:100%;max-height:100%;"><div id="youtube_canvas" style="height:100%;width:100%;max-width:100%">
+                <iframe style="height:100%;width:100%;max-width:100%;border:0;" frameborder="0" 
+                        src="http://www.youtube.com/v/@item.ExternalUrl?version=3&enablejsapi=1"></iframe></div></div>
+        </td>*@
         <td>
             <img src="@item.ImgUrl" alt="Alternate Text" style="width:200px; height:200px; "/>
 
@@ -72,17 +124,22 @@
             @Html.DisplayFor(modelItem => item.VenueId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DateCreated)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateModified)
-        </td>
-        <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @*@Html.ActionLink("Vote", "Voting", null, new { @class = "submit" })
+            <button onclick="location.href='@Url.Action("Voting", "Adventures")">Vote</button>*@
+            @using (Html.BeginForm("Vote1", "Adventures", new { id = item.Id }))
+            {
+
+
+                <input class="btn btn-outline-success my-2 my-sm-0" style="background-color:#ccffcc;margin-left:30px;width:100px;" type="submit" value="vote" id="btnSubmit" />
+            }
+
+
+
         </td>
-    </tr>
+    </tr> 
 }
 
 </table>

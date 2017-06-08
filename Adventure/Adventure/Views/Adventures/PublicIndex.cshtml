@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Adventure.Entities.Models.Adventures>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input  class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search" />
+    </p>
+}
+<table class="table">
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EventTopic)
+        </th>
+        <th>
+            @Html.ActionLink(" User", "PublicIndex", new { sortOrder = ViewBag.DateSortParm })
+        </th>
+        <th>
+            @Html.ActionLink(" Title", "PublicIndex", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImgUrl)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.ExternalUrl)
+            </th>*@
+
+        <th>
+            @Html.DisplayNameFor(model => model.EventDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VenueId)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventTopic.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Performer.UserName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+
+
+
+            @*<td>
+                    <div style="overflow:hidden;height:270px;width:480px;max-width:100%;max-height:100%;"><div id="youtube_canvas" style="height:100%;width:100%;max-width:100%">
+                        <iframe style="height:100%;width:100%;max-width:100%;border:0;" frameborder="0"
+                                src="http://www.youtube.com/v/@item.ExternalUrl?version=3&enablejsapi=1"></iframe></div></div>
+                </td>*@
+            <td>
+                <img src="@item.ImgUrl" alt="Alternate Text" style="width:200px; height:200px; " />
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VenueId)
+            </td>
+            <td>
+               @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |*@
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @*@Html.ActionLink("Delete", "Delete", new { id = item.Id })|*@
+                @*@Html.ActionLink("Vote", "Voting", null, new { @class = "submit" })
+                    <button onclick="location.href='@Url.Action("Voting", "Adventures")">Vote</button>*@
+                @using (Html.BeginForm("Vote1", "Adventures", new { id = item.Id }))
+                {
+
+                    <input type="submit" value="vote" id="btnSubmit" />
+                }
+
+
+
+            </td>
+        </tr>
+    }
+
+</table>

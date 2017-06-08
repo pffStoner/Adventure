@@ -188,10 +188,12 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdventuresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PhotoController.cs" />
     <Compile Include="DTOs\AdventuresEntry.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -205,6 +207,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\adventure-css\default-fonts.css" />
+    <Content Include="CSS\Buttons.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -304,9 +307,16 @@
     <Content Include="Views\Adventures\Details.cshtml" />
     <Content Include="Views\Adventures\Edit.cshtml" />
     <Content Include="Views\Adventures\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPageGuest.cshtml" />
+    <Content Include="Views\Adventures\Voting.cshtml" />
+    <Content Include="Views\Adventures\Top10.cshtml" />
+    <Content Include="Views\Photo\Index.cshtml" />
+    <Content Include="Views\Photo\Create.cshtml" />
+    <Content Include="Views\Adventures\PublicIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="GalleryImages\Thumbs\" />
     <Folder Include="Models\AccountViewModels\" />
   </ItemGroup>
   <ItemGroup>
