@@ -87,7 +87,7 @@
     </dl>
 </div>
 <div>
-    @if (Context.User.IsInRole("Guest"))
+    @*@if (Context.User.IsInRole("Guest"))
     {
         <div class="row">
            <div class="col-md-6">
@@ -99,10 +99,9 @@
                 <h1>Are u idiot</h1>
             </div>
         </div>
-    }
-    else
-    {
-        @Html.ActionLink("Manage Adventures", "Index", "Adventures")
-    }
+    }*@
+   
+        @Html.ActionLink("Manage Your Adventures", "Index", "Adventures")
+    
 
 </div>

@@ -77,18 +77,19 @@
             </td>
             <td>
                @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |*@
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) 
                 @*@Html.ActionLink("Delete", "Delete", new { id = item.Id })|*@
                 @*@Html.ActionLink("Vote", "Voting", null, new { @class = "submit" })
                     <button onclick="location.href='@Url.Action("Voting", "Adventures")">Vote</button>*@
+
+            </td>
+            <td>
                 @using (Html.BeginForm("Vote1", "Adventures", new { id = item.Id }))
                 {
+                <input class="btn btn-outline-success my-2 my-sm-0" style="background-color:black;margin-left:30px;width:100px;" type="submit" value="vote" id="btnSubmit" />
 
-                    <input type="submit" value="vote" id="btnSubmit" />
-                }
-
-
-
+                    @*<input type="submit" value="vote" id="btnSubmit" />*@
+            }
             </td>
         </tr>
     }

@@ -208,6 +208,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\adventure-css\default-fonts.css" />
     <Content Include="CSS\Buttons.css" />
+    <Content Include="CSS\Images.css" />
+    <Content Include="CSS\ModalOpenPictures.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -220,6 +222,11 @@
     <Content Include="images\imagesT0DM9BNO.jpg" />
     <Content Include="images\imagesTALECHEU.jpg" />
     <Content Include="images\nature_call-wide.jpg" />
+    <Content Include="images\test1.jpg" />
+    <Content Include="images\test2.jpg" />
+    <Content Include="images\test3.jpg" />
+    <Content Include="images\test5.jpg" />
+    <Content Include="images\test6.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -313,6 +320,7 @@
     <Content Include="Views\Photo\Index.cshtml" />
     <Content Include="Views\Photo\Create.cshtml" />
     <Content Include="Views\Adventures\PublicIndex.cshtml" />
+    <Content Include="Views\Adventures\Top10test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

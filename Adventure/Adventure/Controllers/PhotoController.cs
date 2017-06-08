@@ -86,7 +86,7 @@ namespace Adventure.Controllers
         {
             return View();
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult Create()
         {
@@ -104,6 +104,7 @@ namespace Adventure.Controllers
             var photo = new Photo();
             return View(photo);
         }
+        [Authorize]
         [HttpPost]
         public ActionResult Create(Photo photo, IEnumerable<HttpPostedFileBase> files, string id)
         {
@@ -183,13 +184,13 @@ namespace Adventure.Controllers
                 return View();
             }
         }
-
+        [Authorize]
         // GET: Photo/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
+        [Authorize]
         // POST: Photo/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)

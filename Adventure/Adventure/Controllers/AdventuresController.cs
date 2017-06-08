@@ -15,12 +15,13 @@ using Adventure.Entities;
 
 namespace Adventure.Controllers
 {
-    [Authorize]
+  
     public class AdventuresController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Adventures
+        [Authorize]
         public ActionResult Index(string sortOrder, string searchString)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
@@ -86,6 +87,7 @@ namespace Adventure.Controllers
         }
 
         // GET: Adventures
+        [Authorize]
         public ActionResult PublicIndex(string sortOrder, string searchString)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
@@ -128,13 +130,18 @@ namespace Adventure.Controllers
 
 
         // GET: Adventures/Details/5
+        [Authorize]
         public ActionResult Details(string id)
         {
+            Adventures adventures = db.Adeventures.Find(id);
+            ViewBag.VideoUrl = adventures.ExternalUrl.ToString();
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Adventures adventures = db.Adeventures.Find(id);
+        
+       
             if (adventures == null)
             {
                 return HttpNotFound();
@@ -143,6 +150,7 @@ namespace Adventure.Controllers
         }
 
         // GET: Adventures/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.EventTopicId = new SelectList(db.EventTopics, "Id", "Name");
@@ -155,6 +163,7 @@ namespace Adventure.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create(AdventuresEntry entry)
         {
             if (ModelState.IsValid)
@@ -181,6 +190,7 @@ namespace Adventure.Controllers
         }
 
         // GET: Adventures/Edit/5
+        [Authorize]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -202,6 +212,7 @@ namespace Adventure.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "Id,Title,Description,ExternalUrl,ImgUrl,EventDate,PerformerId,VenueId,EventTopicId,DateCreated,DateModified")] Adventures adventures)
         {
             if (ModelState.IsValid)
@@ -216,6 +227,7 @@ namespace Adventure.Controllers
         }
 
         // GET: Adventures/Delete/5
+        [Authorize]
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -233,6 +245,7 @@ namespace Adventure.Controllers
         // POST: Adventures/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(string id)
         {
             Adventures adventures = db.Adeventures.Find(id);
@@ -240,7 +253,7 @@ namespace Adventure.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [Authorize]
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -252,6 +265,7 @@ namespace Adventure.Controllers
 
         [HttpPost, ActionName("Vote1")]
         // [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Vote1(Adventures adventures, string id)
         {
             ModelState.Remove("Id");
@@ -284,6 +298,7 @@ namespace Adventure.Controllers
         }
 
         // GET: 
+        [Authorize]
         public ActionResult Vote1(string id)
         {
             if (id == null)
@@ -297,7 +312,6 @@ namespace Adventure.Controllers
             }
             return RedirectToAction("Index");
         }
-
         public ActionResult Top10(string sortOrder)
         {
             //      var top10 = db.Adeventures.OrderByDescending(adv => adv.VoteCount);
@@ -313,8 +327,10 @@ namespace Adventure.Controllers
                             where t.EventTopicId== "6cb05fe8-5bda-4f6b-85b0-a64568e5c8aa"
                             select t;
 
-             
-                        model = model.OrderByDescending(t => t.VoteCount);
+           
+                model = model.OrderByDescending(t => t.VoteCount).Take(10);
+            
+                       
             
                 return View(model.ToList());
             }
