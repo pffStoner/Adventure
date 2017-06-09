@@ -192,7 +192,8 @@ namespace Adventure.Controllers
         // GET: Adventures/Edit/5
         [Authorize]
         public ActionResult Edit(string id)
-        {
+        {                        ModelState.Remove("PerformerId");
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -213,10 +214,14 @@ namespace Adventure.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Edit([Bind(Include = "Id,Title,Description,ExternalUrl,ImgUrl,EventDate,PerformerId,VenueId,EventTopicId,DateCreated,DateModified")] Adventures adventures)
+        public ActionResult Edit([Bind(Include = "Id,Title,Description,ExternalUrl,ImgUrl,EventDate,VenueId,PerformerId,EventTopicId,DateCreated,DateModified")] Adventures adventures)
         {
+            ModelState.Remove("PerformerId");
+
             if (ModelState.IsValid)
             {
+                ModelState.Remove("PerformerId");
+
                 db.Entry(adventures).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

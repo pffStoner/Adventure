@@ -4,18 +4,7 @@
 @{
     ViewBag.Title = "Index";
 }
-<style>
-    /*input[type=text] {
-        width: 100%;
-        padding: 10px 5px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: none;
-        background-color: #ccffcc;
-        color: white;
-    }*/
-   
-</style>
+@Styles.Render("~/CSS/SearchBar.css")
 <h2>Index</h2>
 
 <p>
@@ -24,7 +13,7 @@
 @using (Html.BeginForm())
 {
     <p>
-        Find by name: @Html.TextBox("SearchString")
+        @Html.TextBox("SearchString")
         <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search" />
     </p>
 }

@@ -31,7 +31,7 @@ namespace Adventure.Entities.Common
         public string Id { get; set; }
 
         [Required]
-        [Display(Name = "Event Topic")]
+        [Display(Name = "Privacy")]
         public string Name { get; set; }
     }
 }

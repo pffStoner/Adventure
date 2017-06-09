@@ -19,7 +19,7 @@ namespace Adventure.DTOs
 
         [Required]
         [StringLength(255)]
-        [Display(Name = "Article Url")]
+        [Display(Name = "Video Url")]
         public string ExternalUrl { get; set; }
 
         [Required]
@@ -42,7 +42,7 @@ namespace Adventure.DTOs
         public string VenueId { get; set; }
 
         [Required]
-        [Display(Name = "Event Topic")]
+        [Display(Name = "Privacy")]
         public string EventTopicId { get; set; }
         public int VoteCount { get; set; }
         public DateTime GetDate()

@@ -30,7 +30,7 @@ namespace Adventure.DbContext
 
 
         public ApplicationDbContext()
-   //     : base("Adventure-DevConnection", throwIfV1Schema: false)
+     //  : base("Adventure-DevConnection", throwIfV1Schema: false)
         : base("AdventureConnection", throwIfV1Schema: false)
 
         {
