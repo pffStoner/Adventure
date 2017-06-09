@@ -92,6 +92,7 @@ namespace Adventure.Controllers
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+      var publicId = db.EventTopics.Where(p => p.Name.Contains("Public")).ToString();
 
             // var currentUser = db.Adeventures.Include(u => u.Performer);
             //    var currentUserId = User.Identity.GetUserId();
@@ -120,7 +121,7 @@ namespace Adventure.Controllers
                     break;
             }
 
-            return View(adventures.Where(p => p.EventTopicId == "6cb05fe8-5bda-4f6b-85b0-a64568e5c8aa").ToList());
+            return View(adventures.Where(p => p.EventTopic.Name == "Public").ToList());
 
 
 
@@ -329,7 +330,7 @@ namespace Adventure.Controllers
 
                 var model = from t in db.Adeventures
                             where t.VoteCount > 0
-                            where t.EventTopicId== "6cb05fe8-5bda-4f6b-85b0-a64568e5c8aa"
+                            where t.EventTopic.Name== "Public"
                             select t;
 
            
